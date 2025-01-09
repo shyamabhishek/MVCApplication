@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCApplication.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,7 +22,9 @@ namespace MVCApplication.Controllers
             return View("MyFirstView");
         }public ActionResult MySecondMethod()
         {
-            return View();
+            Employee myemployee = new Employee();
+            var data = myemployee.GetEmployee();
+            return View(data);
         }
     }
 }

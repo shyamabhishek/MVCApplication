@@ -1,8 +1,35 @@
 ﻿
 @{
     ViewBag.Title = "MyView";
-    
+
 }
 
 <h2>MyView</h2>
 
+<div>
+    @DateTime.Now;
+</div>
+<div>
+    @(20-10)
+</div>
+<div>
+    @{
+        int a = 10;
+        int b = 20;
+        int c = a + b;
+        var currentDate = DateTime.Now;
+        var tommorowDay = currentDate.AddDays(1);
+        var myList = new List<string>() { "Shyam", "Amol", "Sachin" };
+
+    }
+    <label>@c</label><br/>
+    <label>@currentDate</label><br/>
+    <label>@tommorowDay</label><br/>
+    @foreach (string item in myList) 
+    {
+        <label>@item</label>
+    }
+</div>
+<div>
+    @@gmail.com
+</div>

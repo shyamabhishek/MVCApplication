@@ -1,7 +1,14 @@
-﻿
+﻿@model MVCApplication.Models.Employee
 @{
     ViewBag.Title = "MySecondMethod";
 }
 
 <h2>MySecondMethod</h2>
 
+<ul>
+    <li>@Model.Id</li>
+    <li>@Model.Name</li>
+    <li>@Model.age</li>
+    <li>@Model.email</li>
+    <li>@Model.phone</li>
+</ul>
