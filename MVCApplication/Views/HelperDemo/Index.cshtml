@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h2>HTML Helper View</h2>
+    </div>
+
+
+    <div>
+        @*Declare Helper*@
+        @helper MyHelper(string[] arr)
+        {
+            if (arr.Length == 0)
+            {
+                <label>Data not exist</label>
+            }
+            else
+            {
+                <ul>
+                    @foreach (string str in arr)
+                    {
+                        <li>@str</li>
+                    }
+
+                </ul>
+            }
+        }
+    </div>
+    <div>
+        <label>Name List</label>
+        @MyHelper(new string[] { "Sunil", "Amol", "Sachin" })
+
+
+    </div>
+    <div>
+        <label>City Name</label>
+        @MyHelper(new string[] { "Pune", "Mumbai", "Delhi" })
+    </div>
+    <div>
+        <label>Empty Array</label><br/>
+        @MyHelper(new string[] { })
+    </div>
+</body>
+</html>

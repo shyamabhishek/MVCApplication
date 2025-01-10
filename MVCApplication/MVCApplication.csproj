@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HelperDemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -181,6 +182,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Students\MyFirstView.cshtml" />
     <Content Include="Views\Students\MySecondMethod.cshtml" />
+    <Content Include="Views\HelperDemo\Index.cshtml" />
+    <Content Include="Views\HelperDemo\About.cshtml" />
+    <Content Include="Views\HelperDemo\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
