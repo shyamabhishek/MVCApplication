@@ -11,9 +11,13 @@
     <title>About</title>
 </head>
 <body>
-    <div> 
+    <div>
+        @{ 
+            int id = 20;
+        }
         @Html.ActionLink("Click Me", "Contact", new {name="Shyam"})
-  
+        @Html.ActionLink("Click Me", "Contact", new {id=@id})
+        @Html.TextBox("custName", null, new { id = "custid", PlaceHolder = "Please enter your name" })
     </div>
 </body>
 </html>

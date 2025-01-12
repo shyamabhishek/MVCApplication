@@ -12,6 +12,8 @@ namespace MVCApplication.Models
         public int age { get; set; }
         public string email { get; set; }
         public long phone { get; set; }
+        public bool IsEmployee { get; set; }
+
 
         public Employee GetEmployee()
         {
