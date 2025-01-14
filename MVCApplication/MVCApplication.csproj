@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HelperDemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SessionMTController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Controllers\TempDataDemoController.cs" />
     <Compile Include="CustomHelper.cs" />
@@ -191,6 +192,8 @@
     <Content Include="Views\TempDataDemo\Index.cshtml" />
     <Content Include="Views\TempDataDemo\About.cshtml" />
     <Content Include="Views\TempDataDemo\Contact.cshtml" />
+    <Content Include="Views\SessionMT\Index.cshtml" />
+    <Content Include="Views\SessionMT\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

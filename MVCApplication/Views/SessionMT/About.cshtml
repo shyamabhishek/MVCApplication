@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>About</title>
+</head>
+<body>
+    <div>
+        <h2>@ViewData["MyKey"]</h2>
+        <h2>@ViewData["MyKey1"]</h2>
+        <h2>@ViewData["MyKey2"]</h2>
+        <div>
+            <ul>
+                @foreach (string item in (List<string>)ViewData["MyKey3"])
+                {
+                    <li>@item</li>
+                }
+            </ul>
+        </div>
+        <div>
+            <ul>
+                @foreach (var item in (List<MVCApplication.Models.Employee>)ViewData["MyKey4"])
+                {
+                    <li>@item.Name</li>
+                    <li>@item.age</li>
+                    <li>@item.email</li>
+
+
+                }
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
