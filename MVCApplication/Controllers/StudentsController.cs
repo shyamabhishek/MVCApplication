@@ -22,7 +22,7 @@ namespace MVCApplication.Controllers
             return View("MyFirstView");
         }public ActionResult MySecondMethod()
         {
-            Employee myemployee = new Employee();
+            EmployeeOld myemployee = new EmployeeOld();
             var data = myemployee.GetEmployee();
             return View(data);
         }

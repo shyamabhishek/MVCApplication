@@ -24,7 +24,7 @@ namespace MVCApplication.Controllers
         }
         public ActionResult StronglyTypeDemo()
         {
-            Employee emp = new Employee()
+            EmployeeOld emp = new EmployeeOld()
             {
                 IsEmployee = true,
                 Name ="Testing",
@@ -33,7 +33,7 @@ namespace MVCApplication.Controllers
             return View(emp);
         }
         [HttpPost]
-        public void StronglyTypeDemo(Employee emp)
+        public void StronglyTypeDemo(EmployeeOld emp)
         {
 
         }

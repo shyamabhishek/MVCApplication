@@ -14,8 +14,8 @@ namespace MVCApplication.Controllers
         {
             List<string> myListCollection = new List<string>()
             { "java", "Python", "c#", "React"};
-            List<Employee> myList = new List<Employee>();
-            Employee emp = new Employee
+            List<EmployeeOld> myList = new List<EmployeeOld>();
+            EmployeeOld emp = new EmployeeOld
             {
                 Name = "Shyam",
                 age = 25,
@@ -39,8 +39,8 @@ namespace MVCApplication.Controllers
             List<string> myListCollection = new List<string>()
             { "java", "Python", "c#", "React"};
             ViewData["MyKey3"] = myListCollection;
-            List<Employee> myList = new List<Employee>();
-            Employee emp = new Employee
+            List<EmployeeOld> myList = new List<EmployeeOld>();
+            EmployeeOld emp = new EmployeeOld
             {
                 Name = "Shyam",
                 age = 25,
