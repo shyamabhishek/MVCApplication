@@ -4,32 +4,52 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Services.Description;
 
 namespace MVCApplication.Controllers
 {
+    [RoutePrefix("Employee")] //place common url in here
     public class EmployeeController : Controller
     {
-        // GET: Employee
+        [Route("")]
+        //[Route("Employee")] //normal routing
         public ActionResult GetAllEmployee()
         {
             var employeeList = GetEmpList();
             return View(employeeList);
         }
+        [Route("{id:int:min(5)}")]
+        //[Route("{id : int}")] //common url in the RoutePrefix, (int is for other int than id is entered in url handelling)
+        //[Route("Employee/{id}")]
         public ActionResult GetEmployee(int id)
         {
             var employee = GetEmpList().FirstOrDefault(x => x.EmpId == id);
             return View(employee);
         }
-        public ActionResult GetEmployeeByName(string id)
+        //string entered in url error handeling
+        [Route("{id}")]
+        public string MyString(string myid)
         {
-            var employee = GetEmpList().FirstOrDefault(x => x.EmpName == id);
-            return View(employee);
+            return myid;
         }
+
+        //public ActionResult GetEmployeeByName(string id)
+        //{
+        //    var employee = GetEmpList().FirstOrDefault(x => x.EmpName == id);
+        //    return View(employee);
+        //}
+        [Route("address/{id}")]
+        //[Route("Employee/address/{id}")]
         public ActionResult GetEmployeeAddress(int id)
         {
             //we can use select and above query instead of where
             var employee = GetEmpList().Where(x => x.EmpId == id).Select(x => x.Address).FirstOrDefault();
             return View(employee);
+        }
+        [Route("~/helpus")] //override routes
+        public ActionResult HelpUs()
+        {
+            return View();
         }
         private List<Employee> GetEmpList()
         {

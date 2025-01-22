@@ -12,23 +12,25 @@ namespace MVCApplication
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            routes.MapRoute(
-                name: "AllEmployee",
-                url: "Employee",
-                defaults: new { controller = "Employee", action = "GetAllEmployee", id = UrlParameter.Optional }
-                ); 
-            routes.MapRoute(
-                name: "Employee",
-                url: "Employee/{id}",
-                defaults: new { controller = "Employee", action = "GetEmployee", id = UrlParameter.Optional }
-                );
-            routes.MapRoute(
-                name: "EmployeeAddress",
-                url: "Employee/Address/{id}",
-                defaults: new { controller = "Employee", action = "GetEmployeeAddress", id = UrlParameter.Optional },
-                constraints: new {id = @"\d+"}
-                
-                );
+            routes.MapMvcAttributeRoutes();
+
+            //routes.MapRoute(
+            //    name: "AllEmployee",
+            //    url: "Employee",
+            //    defaults: new { controller = "Employee", action = "GetAllEmployee", id = UrlParameter.Optional }
+            //    ); 
+            //routes.MapRoute(
+            //    name: "Employee",
+            //    url: "Employee/{id}",
+            //    defaults: new { controller = "Employee", action = "GetEmployee", id = UrlParameter.Optional }
+            //    );
+            //routes.MapRoute(
+            //    name: "EmployeeAddress",
+            //    url: "Employee/Address/{id}",
+            //    defaults: new { controller = "Employee", action = "GetEmployeeAddress", id = UrlParameter.Optional },
+            //    constraints: new {id = @"\d+"}
+
+            //    );
 
 
 

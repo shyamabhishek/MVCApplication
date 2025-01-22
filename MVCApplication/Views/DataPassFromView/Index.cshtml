@@ -1,0 +1,67 @@
+﻿@model MVCApplication.Models.Employee
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div>
+    <hr>
+    <section>
+        @using (Html.BeginForm("PostDataUsingParameters", "DataPassFromView"))
+        {
+            <span>First Name :</span> <input type="text" name="firstname" /><br />
+            <span>Last Name :</span><input type="text" name="laststname" /><br />
+            <span>Address :</span><input type="text" name="address" /><br />
+            <span>Phone Number :</span><input type="text" name="phonenumber" /><br />
+            <span>Email :</span><input type="text" name="email" /><br />
+            <input type="submit" value="Submit" />
+        }
+    </section>
+    <hr />
+</div>
+<div>
+    <hr>
+    <section>
+        @using (Html.BeginForm("PostDataUsingRequest", "DataPassFromView"))
+        {
+            <span>First Name :</span> <input type="text" name="firstname" /><br />
+            <span>Last Name :</span><input type="text" name="laststname" /><br />
+            <span>Address :</span><input type="text" name="address" /><br />
+            <span>Phone Number :</span><input type="text" name="phonenumber" /><br />
+            <span>Email :</span><input type="text" name="email" /><br />
+            <input type="submit" value="Submit" />
+        }
+    </section>
+    <hr />
+</div>
+<div>
+    <hr>
+    <section>
+        @using (Html.BeginForm("PostDataUsingFormCollection", "DataPassFromView"))
+        {
+            <span>First Name :</span> <input type="text" name="firstname" /><br />
+            <span>Last Name :</span><input type="text" name="laststname" /><br />
+            <span>Address :</span><input type="text" name="address" /><br />
+            <span>Phone Number :</span><input type="text" name="phonenumber" /><br />
+            <span>Email :</span><input type="text" name="email" /><br />
+            <input type="submit" value="Submit" />
+        }
+    </section>
+    <hr />
+</div>
+<div>
+    <section>
+        @using (Html.BeginForm("PostDataUsingFormCollection", "DataPassFromView"))
+        {
+            @Html.TextBoxFor(x => x.EmpName)
+            @Html.TextBoxFor(x=>x.Email)
+            @Html.TextBoxFor(x=>x.Phone)
+            @Html.TextBoxFor(x=>x.Dept)
+            @Html.TextBoxFor(x=>x.Address.City)
+
+            <input type="submit" value="Submit" />
+        }
+    </section>
+</div>
